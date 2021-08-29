@@ -1,0 +1,190 @@
+/* color scheme */
+:root {
+    --chalk: #fbf7f5;
+    --darkcharcoal: #29353d;
+    --lightcharcoal: #98a7b1;
+    --orange-button: #fd7302;  
+}
+
+html {
+    /* set global font size to 10 for easy calculations */ 
+    font-size: 62.5%;
+}
+  
+body {
+    /* Sans Serif font stack is implemented to help select the best font for eac */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* set body font size to 1.75rem, which is 1.75x more than the font-size of */
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: var(--darkcharcoal);
+    background-color: var(--chalk);
+}  
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0.625rem;
+    color: var(--chalk);
+    font-weight: 700;
+    line-height: 1.1;
+}
+  
+h1 {
+    font-size: 4rem;
+}
+  
+h2 {
+  font-size: 3.5rem;
+}
+  
+h3 {
+    font-size: 3rem;
+}
+  
+h4 {
+    font-size: 2.5rem;
+}
+  
+h5 {
+    font-size: 2rem;
+}
+  
+h6 {
+    font-size: 1.5rem;
+}
+  
+p {
+    margin-bottom: 1rem;
+}
+
+body {
+    min-width: 100%;
+    background-color: var(--chalk);
+    color: var(--darkcharcoal);
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    color: var(--chalk);  
+    background-color: var(--darkcharcoal);
+    opacity: 0.75;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div h2 {
+    padding: 1rem 1rem;
+}
+
+header div img {
+    max-height: 4.5rem;
+    background-color: var(--darkcharcoal);
+    float: right;
+    max-height: 100%;
+    padding: 0 1rem;
+}
+
+.nav-menu-large {
+    display: none;
+}
+
+.navMenuItems {
+    display: none;
+    flex-direction: column;
+    background-color: var(--lightcharcoal);
+}
+
+.navMenuItems li {
+    box-shadow: 0 0 1px var(--darkcharcoal);
+}
+.navMenuItems a {
+    color: var(--darkcharcoal);
+    text-decoration: none;
+    padding: 1rem 1rem;
+    line-height: 5rem;
+}
+
+main {
+    display: block;
+}
+
+aside {
+    flex: 1 0 25%;
+    background-color: var(--lightcharcoal);
+    padding: 20px;
+    order: 1;
+  }
+  
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+.aboutMeImage {
+    flex: 3 0 75%;
+    padding: 0px;
+    width:100%;
+}
+
+.sample-img {
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    height: 200px;
+    border: 1px solid black;
+}
+  
+
+@media screen and (min-width:768px) {
+/* Change the navigattion menu bar for tablet screens */
+    header img {
+        visibility: hidden;
+    }
+
+    .nav-menu-large {
+        display: flex;
+    }
+    .nav-menu-small {
+        display: none;
+    }
+    .navMenuItems {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: var(--darkcharcoal);
+    }
+    .navMenuItems li {
+        box-shadow: none;
+    }
+    .navMenuItems a {
+        color: var(--chalk);
+        text-decoration: none;
+        padding: 1rem 1rem;
+        line-height: 1.5rem;
+    }
+    .navMenuItems li a:hover {
+        color: var(--orange-button);
+        transform: translate(20px);
+    }
+    /* About me section syling*/
+    .aboutMe {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    aside {
+        order: 0;
+    }
+    .aboutMeImage {
+        width: 100%;
+    }
+}    
