@@ -85,15 +85,14 @@ header div h2 {
     padding: 1rem 1rem;
 }
 
-header div img {
-    max-height: 4.5rem;
+.hamburger {
+    height: 3.75rem;
     background-color: var(--darkcharcoal);
     float: right;
-    max-height: 100%;
     padding: 0 1rem;
 }
 
-.nav-menu-large {
+.navMenuLarge {
     display: none;
 }
 
@@ -151,7 +150,7 @@ aside h4 {
     .nav-menu-small {
         display: none;
     }
-    .nav-menu-large {
+    .navMenuLarge {
         display: flex;
     }
     .navMenuItems {
