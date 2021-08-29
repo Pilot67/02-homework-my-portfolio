@@ -62,13 +62,13 @@ p {
 }
 
 body {
-    min-width: 100%;
     background-color: var(--chalk);
     color: var(--darkcharcoal);
 }
 
 header {
     position: sticky;
+    width: 100%;
     top: 0px;
     color: var(--chalk);  
     background-color: var(--darkcharcoal);
@@ -107,18 +107,15 @@ header div img {
     box-shadow: 0 0 1px var(--darkcharcoal);
 }
 .navMenuItems a {
+    display: block;
     color: var(--darkcharcoal);
     text-decoration: none;
     padding: 1rem 1rem;
     line-height: 5rem;
 }
 
-main {
-    display: block;
-}
-
 aside {
-    flex: 1 0 25%;
+    flex: 1 0 35%;
     background-color: var(--lightcharcoal);
     padding: 20px;
     order: 1;
@@ -128,34 +125,34 @@ aside {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
 }
+
+.aboutMeDiv {
+    flex: 3 1 75%;
+}
+
 .aboutMeImage {
-    flex: 3 0 75%;
-    padding: 0px;
     width:100%;
+    margin-bottom: -.75rem;
+    ;
 }
 
-.sample-img {
-    background-color: #fff;
-    width: 100%;
-    padding: 20px;
-    height: 200px;
-    border: 1px solid black;
-}
-  
+aside h2,
+aside h3,
+aside h4 {
+    text-align: center;
+    color: var(--darkcharcoal);
+    margin-bottom: 2rem;
+}  
 
 @media screen and (min-width:768px) {
 /* Change the navigattion menu bar for tablet screens */
-    header img {
-        visibility: hidden;
-    }
-
-    .nav-menu-large {
-        display: flex;
-    }
+    .hamburger,
     .nav-menu-small {
         display: none;
+    }
+    .nav-menu-large {
+        display: flex;
     }
     .navMenuItems {
         display: flex;
@@ -173,18 +170,26 @@ aside {
         line-height: 1.5rem;
     }
     .navMenuItems li a:hover {
-        color: var(--orange-button);
-        transform: translate(20px);
+        color: var(--lightcharcoal);
+        transform: translate(-2px,-2px);
     }
     /* About me section syling*/
     .aboutMe {
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap:nowrap ;
     }
     aside {
         order: 0;
     }
-    .aboutMeImage {
+    /* .aboutMeImage {
         width: 100%;
-    }
+    } */
+}
+
+@media screen and (min-width:992px) {
+    /* Change the navigattion menu bar for PC screens */
+    body {
+        max-width: 75%;
+        margin: 0 auto;        
+    }   
 }    
