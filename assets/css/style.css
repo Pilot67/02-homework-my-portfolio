@@ -3,14 +3,14 @@
     --chalk: #fbf7f5;
     --darkcharcoal: #29353d;
     --lightcharcoal: #98a7b1;
-    --orange-button: #fd7302;  
+    --orange-button: #fd7302;
 }
 
 html {
-    /* set global font size to 10 for easy calculations */ 
+    /* set global font size to 10 for easy calculations */
     font-size: 62.5%;
 }
-  
+
 body {
     /* Sans Serif font stack is implemented to help select the best font for eac */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -19,7 +19,7 @@ body {
     line-height: 1.5;
     color: var(--darkcharcoal);
     background-color: var(--chalk);
-}  
+}
 
 h1,
 h2,
@@ -28,35 +28,35 @@ h4,
 h5,
 h6 {
     margin-bottom: 0.625rem;
-    color: var(--chalk);
+    color: var(--darkcharcoal);
     font-weight: 700;
     line-height: 1.1;
 }
-  
+
 h1 {
     font-size: 4rem;
 }
-  
+
 h2 {
   font-size: 3.5rem;
 }
-  
+
 h3 {
     font-size: 3rem;
 }
-  
+
 h4 {
     font-size: 2.5rem;
 }
-  
+
 h5 {
     font-size: 2rem;
 }
-  
+
 h6 {
     font-size: 1.5rem;
 }
-  
+
 p {
     margin-bottom: 1rem;
 }
@@ -67,10 +67,10 @@ body {
 }
 
 header {
-    position: sticky;
+    /* position: sticky; */
     width: 100%;
     top: 0px;
-    color: var(--chalk);  
+    color: var(--chalk);
     background-color: var(--darkcharcoal);
     opacity: 0.75;
 }
@@ -82,6 +82,7 @@ header div {
 }
 
 header div h2 {
+    color: var(--chalk);
     padding: 1rem 1rem;
 }
 
@@ -114,13 +115,28 @@ header div h2 {
 }
 
 aside {
+    position: relative;
     flex: 1 0 35%;
     background-color: var(--lightcharcoal);
     padding: 20px;
     order: 1;
-  }
-  
-.aboutMe {
+}
+
+aside button {
+    display:block;
+    width: 85%;
+    margin: 1rem auto;
+    color: var(--chalk);
+    background-color: var(--orange-button);
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0 0 .3rem var(--darkcharcoal);
+    padding: .5rem 1.5rem;
+}
+
+
+.aboutMe,
+.project {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -142,17 +158,47 @@ aside h4 {
     text-align: center;
     color: var(--darkcharcoal);
     margin-bottom: 2rem;
-}  
-
+}
+#projectSection {
+    margin: 3rem 0;
+}
+.projectBox {
+    display: block;
+    flex: 0 1 100%;
+    padding: 1rem;
+    border: .15rem var(--lightcharcoal) solid;
+    margin: .3rem .15rem;
+    box-shadow: 0 0 .2rem var(--darkcharcoal);
+}
+.projectBox h2{
+    color: var(--darkcharcoal);
+    text-align: center;
+}
+.projectImage {
+    width:100%;
+    float: right;
+}
+.firstProjectImage {
+    width: 100%;
+}
+.underConstruction p::before {
+    content: "👷 ";
+}
+.underConstruction p::after {
+    content: " 👷";
+}
+footer {
+    display:flex;
+    height: 30rem;
+    background-color: var(--darkcharcoal);
+}
 @media screen and (min-width:768px) {
 /* Change the navigattion menu bar for tablet screens */
     .hamburger,
     .nav-menu-small {
         display: none;
     }
-    .navMenuLarge {
-        display: flex;
-    }
+    .navMenuLarge,
     .navMenuItems {
         display: flex;
         flex-direction: row;
@@ -175,20 +221,52 @@ aside h4 {
     /* About me section syling*/
     .aboutMe {
         flex-direction: row;
-        flex-wrap:nowrap ;
+        flex-wrap: nowrap;
     }
     aside {
         order: 0;
     }
+    aside button:hover {
+        color: var(--lightcharcoal);
+        transform: translate(-1px,-1px);
+    }
     /* .aboutMeImage {
         width: 100%;
     } */
+    .project {
+        flex-direction: row;
+        flex-wrap:wrap ;
+    }
+    .projectBox {
+        flex: 1 1 48%;
+    }
+    .first {
+        flex: 2 1 75%;
+    }
+    aside button {
+        position: absolute;
+        bottom: 50px;
+        left: 0px;
+        width: 85%;
+        margin-left: 2vw;
+        color: var(--chalk);
+        background-color: var(--orange-button);
+        border-radius: 2rem;
+        border: none;
+        box-shadow: 0 0 .3rem var(--darkcharcoal);
+        padding: .5rem 1.5rem;
+    }
+    .firstProjectImage {
+        width: 70%;
+        float: right;
+    }
+       
 }
 
 @media screen and (min-width:992px) {
     /* Change the navigattion menu bar for PC screens */
     body {
         max-width: 75%;
-        margin: 0 auto;        
-    }   
-}    
+        margin: 0 auto;
+    }
+}

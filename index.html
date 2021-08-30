@@ -19,9 +19,9 @@
             <nav class="navMenuLarge">
                 <ul class="navMenuItems">
                     <li><a href="#aboutMe">About me</a></li>
-                    <li><a href="#">My projects</a></li>
+                    <li><a href="#projectSection">My projects</a></li>
                     <li><a href="#">What I can do</a></li>
-                    <li><a href="#">contact</a></li>
+                    <li><a href="#contactMe">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,31 +29,74 @@
         <nav class="nav-menu-small" >
             <ul onclick="smallMenuClick()" class="navMenuItems" id="smallMenuItems">
                 <li><a href="#aboutMe">About me</a></li>
-                <li><a href="#">My projects</a></li>
+                <li><a href="#projectSection">My projects</a></li>
                 <li><a href="#">What I can do</a></li>
-                <li><a href="#">contact</a></li>
+                <li><a href="#contactMe">Contact</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
+        <!-- About Me section using flexbox and responsive sizing -->
         <Section class="aboutMe">
             <aside>
-            <h3>Stuart Simmons</h3>
-            <h4>Professional web development</h4>
-            <!-- <div class="sample-img">Image</div> -->
-            <p>
-                It will stack BELOW the body once the screen hits 768px or smaller.
-            </p>
+                <h3>Stuart Simmons</h3>
+                <h4>Professional web develloper</h4>
+                <p>
+                    It will stack BELOW the body once the screen hits 768px or smaller.
+                </p>
+                <button>Contact Me</button>
+
             </aside>
             
             <!-- Hero image -->
             <div class="aboutMeDiv">
                 <img class="aboutMeImage" src="./assets/images/heroImage.jpg" alt="Image of Stuart Simmons">
             </div>
-
         </section>
-      </main>
+
+
+        <!-- Project section -->
+        <section id="projectSection">
+            <h2>My Web Sites</h2>
+            
+            <div class="project">
+                <article class="projectBox first">
+                    <!-- Link image to website -->
+                    <a href="https:/arcaviation.com.au">
+                        <img class="firstProjectImage" src="./assets/images/arcAviation-1024-768.jpg" alt="Cirrus aircraft flying">
+                    </a>
+                    <h4>ARC Aviation</h4>
+                    <p>Arc aviation is a training and sales company based at Moorabbin Airport, Melbourne  Australia.</p>
+                    <p>Their website showcases sales channels and flight training. The site includes photo galleries, news articles and contact information.</p>
+                </article>
+    
+                <article class="projectBox underConstruction">
+                    <a href="#">
+                        <img class="projectImage" src="./assets/images/christopherBurnsSydney.jpg" alt="">
+                    </a>
+                    <h4>New project to come</h4>
+                    <p>Under Construction</p>
+                </article>
+
+                <article class="projectBox underConstruction">
+                    <a href="#">
+                        <img class="projectImage" src="./assets/images/Wireframe-marco-nenzi-1024-768.jpg" alt="">
+                    </a>
+                    <h4>New project to come</h4>
+                    <p>Under Construction</p>
+                </article>
+            </div>      
+        </section>
+    </main>
+        <!-- Footer including contact details -->
+        <footer id="contactMe">
+            <section class="myContactDetails">
+                <h4>Stuart Simmons</h4>
+            </section>
+        </footer>
+
+
   
 
 
@@ -61,10 +104,10 @@
         // script to open and close the small device menu
         function myMenuClick() {
             var e = document.getElementById("smallMenuItems");
-            if(e.style.display == 'none')
-                e.style.display = 'flex';
-            else
+            if(e.style.display == 'flex')
                 e.style.display = 'none';
+            else
+                e.style.display = 'flex';
         }
         function smallMenuClick() {
             document.getElementById("smallMenuItems").style.display = 'none';
