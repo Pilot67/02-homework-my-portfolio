@@ -9,6 +9,7 @@
 html {
     /* set global font size to 10 for easy calculations */
     font-size: 62.5%;
+    background-color: var(--chalk);
 }
 
 body {
@@ -19,6 +20,9 @@ body {
     line-height: 1.5;
     color: var(--darkcharcoal);
     background-color: var(--chalk);
+}
+a {
+    text-decoration: none;
 }
 
 h1,
@@ -72,7 +76,6 @@ header {
     top: 0px;
     color: var(--chalk);
     background-color: var(--darkcharcoal);
-    opacity: 0.75;
 }
 
 header div {
@@ -81,7 +84,12 @@ header div {
     align-items: center;
 }
 
-header div h2 {
+header div h2,
+footer h2,
+footer section h2,
+footer section h4,
+footer section h5,
+footer section h6 {
     color: var(--chalk);
     padding: 1rem 1rem;
 }
@@ -122,7 +130,7 @@ aside {
     order: 1;
 }
 
-aside button {
+button {
     display:block;
     width: 85%;
     margin: 1rem auto;
@@ -174,24 +182,50 @@ aside h4 {
     color: var(--darkcharcoal);
     text-align: center;
 }
-.projectImage {
+.projectImage,
+.firstProjectImage {
     width:100%;
     float: right;
 }
-.firstProjectImage {
+/* .firstProjectImage {
     width: 100%;
-}
+} */
 .underConstruction p::before {
     content: "👷 ";
 }
 .underConstruction p::after {
     content: " 👷";
 }
+/* Footer styling */
 footer {
     display:flex;
-    height: 30rem;
     background-color: var(--darkcharcoal);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 }
+#contactMe h2 {
+    flex: 2 1 100%;
+    text-align: center;
+}
+.myContactDetails,
+.contactForm {
+    display: block;
+    flex: 1 1 48%;
+    padding: 1rem 2rem;
+}
+.myContactDetails {
+    border-bottom: 1px solid var(--lightcharcoal);
+}
+footer section label {
+    color: var(--chalk);
+}
+input {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
 @media screen and (min-width:768px) {
 /* Change the navigattion menu bar for tablet screens */
     .hamburger,
@@ -230,9 +264,14 @@ footer {
         color: var(--lightcharcoal);
         transform: translate(-1px,-1px);
     }
-    /* .aboutMeImage {
-        width: 100%;
-    } */
+    aside button {
+        position: absolute;
+        bottom: 50px;
+        left: 0px;
+        width: 85%;
+        margin-left: 2vw;
+    }
+/* project section styling */
     .project {
         flex-direction: row;
         flex-wrap:wrap ;
@@ -243,30 +282,21 @@ footer {
     .first {
         flex: 2 1 75%;
     }
-    aside button {
-        position: absolute;
-        bottom: 50px;
-        left: 0px;
-        width: 85%;
-        margin-left: 2vw;
-        color: var(--chalk);
-        background-color: var(--orange-button);
-        border-radius: 2rem;
-        border: none;
-        box-shadow: 0 0 .3rem var(--darkcharcoal);
-        padding: .5rem 1.5rem;
-    }
+    /* Set the width of the first photo to 70% and float right */
     .firstProjectImage {
         width: 70%;
         float: right;
+        padding-left: 1rem;
     }
-       
+    footer {
+        flex-direction: row;
+    }   
 }
 
 @media screen and (min-width:992px) {
     /* Change the navigattion menu bar for PC screens */
     body {
-        max-width: 75%;
+        max-width: 85%;
         margin: 0 auto;
     }
 }
