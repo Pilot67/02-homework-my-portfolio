@@ -188,7 +188,7 @@ aside h4 {
     flex: 0 1 100%;
     padding: 1rem;
     border: .15rem var(--lightcharcoal) solid;
-    margin: .3rem .15rem;
+    margin: .3rem .3rem;
     box-shadow: 0 0 .2rem var(--darkcharcoal);
 }
 .projectBox h2{
