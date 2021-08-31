@@ -138,7 +138,7 @@ footer section h6 {
 
 aside {
     position: relative;
-    flex: 1 0 35%;
+    flex: 1 0 40%;
     background-color: var(--lightcharcoal);
     padding: 20px 20px 5px 20px;
     order: 1;
