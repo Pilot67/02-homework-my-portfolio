@@ -1,9 +1,18 @@
 /* color scheme */
 :root {
     --chalk: #fbf7f5;
+    --Gold: #d4af37;
+    --darkcharcoal: #1e282e;
+    --lightcharcoal: #d7dee4;
+    --orange-button: #fd7302;
+
+    /* --chalk: #fbf7f5;
+    --Gold: #d4af37;
     --darkcharcoal: #29353d;
     --lightcharcoal: #98a7b1;
-    --orange-button: #fd7302;
+    --orange-button: #fd7302; */
+
+
 }
 
 html {
@@ -71,7 +80,6 @@ body {
 }
 
 header {
-    /* position: sticky; */
     width: 100%;
     top: 0px;
     color: var(--chalk);
@@ -90,10 +98,16 @@ footer section h2,
 footer section h4,
 footer section h5,
 footer section h6 {
-    color: var(--chalk);
+    /* color: var(--chalk); */
+    color: var(--Gold);
     padding: 1rem 1rem;
 }
-
+footer section h5,
+footer section h6 {
+    color: var(--chalk);
+    padding: 1rem 1rem;
+    
+}
 .hamburger {
     height: 3.75rem;
     background-color: var(--darkcharcoal);
@@ -126,22 +140,21 @@ aside {
     position: relative;
     flex: 1 0 35%;
     background-color: var(--lightcharcoal);
-    padding: 20px;
+    padding: 20px 20px 5px 20px;
     order: 1;
 }
 
 button {
     display:block;
     width: 85%;
-    margin: 1rem auto;
+    margin: 2rem auto;
     color: var(--chalk);
     background-color: var(--orange-button);
     border-radius: 2rem;
     border: none;
     box-shadow: 0 0 .3rem var(--darkcharcoal);
-    padding: .5rem 1.5rem;
+    padding: .75rem 1.5rem;
 }
-
 
 .aboutMe,
 .project {
@@ -244,6 +257,8 @@ input {
     }
     .navMenuItems a {
         color: var(--chalk);
+        color: var(--Gold);
+       
         text-decoration: none;
         padding: 1rem 1rem;
         line-height: 1.5rem;
@@ -259,18 +274,18 @@ input {
     }
     aside {
         order: 0;
+        max-width: 350px;
     }
+    .aboutMeImage {
+        min-height: 100%;
+        object-fit: cover;
+    }
+
     aside button:hover {
         color: var(--lightcharcoal);
         transform: translate(-1px,-1px);
     }
-    aside button {
-        position: absolute;
-        bottom: 50px;
-        left: 0px;
-        width: 85%;
-        margin-left: 2vw;
-    }
+
 /* project section styling */
     .project {
         flex-direction: row;
