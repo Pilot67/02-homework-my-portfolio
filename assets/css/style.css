@@ -1,18 +1,10 @@
 /* color scheme */
 :root {
     --chalk: #fbf7f5;
-    --Gold: #d4af37;
-    --darkcharcoal: #1e282e;
-    --lightcharcoal: #d7dee4;
-    --orange-button: #fd7302;
-
-    /* --chalk: #fbf7f5;
-    --Gold: #d4af37;
-    --darkcharcoal: #29353d;
-    --lightcharcoal: #98a7b1;
-    --orange-button: #fd7302; */
-
-
+    --khaki: #d4c69e;
+    --greenButton: #036d1a;
+    --darkcharcoal: #33320b;
+    --textBlack: #0c0c0c;
 }
 
 html {
@@ -22,26 +14,21 @@ html {
 }
 
 body {
-    /* Sans Serif font stack is implemented to help select the best font for eac */
+    /* Set body font and text size */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* set body font size to 1.75rem, which is 1.75x more than the font-size of */
     font-size: 1.75rem;
     line-height: 1.5;
-    color: var(--darkcharcoal);
+    color: var(--textBlack);
     background-color: var(--chalk);
 }
+
 a {
     text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.625rem;
-    color: var(--darkcharcoal);
+    color: var(--textBlack);
     font-weight: 700;
     line-height: 1.1;
 }
@@ -74,10 +61,6 @@ p {
     margin-bottom: 1rem;
 }
 
-body {
-    background-color: var(--chalk);
-    color: var(--darkcharcoal);
-}
 
 header {
     width: 100%;
@@ -98,16 +81,10 @@ footer section h2,
 footer section h4,
 footer section h5,
 footer section h6 {
-    /* color: var(--chalk); */
-    color: var(--Gold);
-    padding: 1rem 1rem;
-}
-footer section h5,
-footer section h6 {
     color: var(--chalk);
     padding: 1rem 1rem;
-    
 }
+
 .hamburger {
     height: 3.75rem;
     background-color: var(--darkcharcoal);
@@ -122,12 +99,13 @@ footer section h6 {
 .navMenuItems {
     display: none;
     flex-direction: column;
-    background-color: var(--lightcharcoal);
+    background-color: var(--khaki);
 }
 
 .navMenuItems li {
     box-shadow: 0 0 1px var(--darkcharcoal);
 }
+/* mobile menu items selection*/
 .navMenuItems a {
     display: block;
     color: var(--darkcharcoal);
@@ -136,20 +114,29 @@ footer section h6 {
     line-height: 5rem;
 }
 
+/* aside styling */
 aside {
     position: relative;
     flex: 1 0 40%;
-    background-color: var(--lightcharcoal);
+    background-color: var(--khaki);
     padding: 20px 20px 5px 20px;
     order: 1;
 }
 
+aside h2,
+aside h3,
+aside h4 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* button styling (whole web-site) */
 button {
     display:block;
     width: 85%;
     margin: 2rem auto;
     color: var(--chalk);
-    background-color: var(--orange-button);
+    background-color: var(--greenButton);
     border-radius: 2rem;
     border: none;
     box-shadow: 0 0 .3rem var(--darkcharcoal);
@@ -173,13 +160,6 @@ button {
     ;
 }
 
-aside h2,
-aside h3,
-aside h4 {
-    text-align: center;
-    color: var(--darkcharcoal);
-    margin-bottom: 2rem;
-}
 #projectSection {
     margin: 3rem 0;
 }
@@ -187,7 +167,7 @@ aside h4 {
     display: block;
     flex: 0 1 100%;
     padding: 1rem;
-    border: .15rem var(--lightcharcoal) solid;
+    border: .15rem var(--khaki) solid;
     margin: .3rem .3rem;
     box-shadow: 0 0 .2rem var(--darkcharcoal);
 }
@@ -200,9 +180,6 @@ aside h4 {
     width:100%;
     float: right;
 }
-/* .firstProjectImage {
-    width: 100%;
-} */
 .underConstruction p::before {
     content: "👷 ";
 }
@@ -217,6 +194,7 @@ footer {
     flex-wrap: wrap;
     align-content: center;
 }
+/* contact me heading*/
 #contactMe h2 {
     flex: 2 1 100%;
     text-align: center;
@@ -228,7 +206,7 @@ footer {
     padding: 1rem 2rem;
 }
 .myContactDetails {
-    border-bottom: 1px solid var(--lightcharcoal);
+    border-bottom: 1px solid var(--khaki);
 }
 footer section label {
     color: var(--chalk);
@@ -257,14 +235,13 @@ input {
     }
     .navMenuItems a {
         color: var(--chalk);
-        color: var(--Gold);
        
         text-decoration: none;
         padding: 1rem 1rem;
         line-height: 1.5rem;
     }
     .navMenuItems li a:hover {
-        color: var(--lightcharcoal);
+        color: var(--khaki);
         transform: translate(-2px,-2px);
     }
     /* About me section syling*/
@@ -281,8 +258,8 @@ input {
         object-fit: cover;
     }
 
-    aside button:hover {
-        color: var(--lightcharcoal);
+    button:hover {
+        color: var(--khaki);
         transform: translate(-1px,-1px);
     }
 
@@ -303,6 +280,8 @@ input {
         float: right;
         padding-left: 1rem;
     }
+    
+    /* Change the footer from flex column to flex row */
     footer {
         flex-direction: row;
     }   
