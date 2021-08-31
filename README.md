@@ -1,10 +1,10 @@
 # 02-homework-my-portfolio
 Homework 02 - Building my own portfolio web page
 ```
-Link here
+https://github.com/Pilot67/02-homework-my-portfolio
 ```
 ```
-Link here
+https://pilot67.github.io/02-homework-my-portfolio/
 ```
 This is my Professional portfolio web-site. The menu links at the top of the page will scroll the page to the sections - 'About Me' , 'My Projects' , 'Contact Information'.
 The website is responsive and the menu will change to a 'Hamburger' style on mobile devices.
