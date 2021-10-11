@@ -1,134 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stuart's Portfolio</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/overcast/jquery-ui.min.css"
+      integrity="sha512-uhRZ0EP8LWCnPThiGrXLSIuqg4O+jPVWASoEsaRXM7f20flrtyk6v3jET0HPg8XjmMZftNIQbl4AR2FMhoDQUw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div>
-            <!-- Page header -->
-            <h2>Portfolio</h2>
-            <img class="hamburger" onclick="myMenuClick()" src="./assets/images/hamburger.png" alt="Hamburger Icon">
-            <!-- menu for large devices -->
-            <nav class="navMenuLarge">
-                <ul class="navMenuItems">
-                    <li><a href="#aboutMe">About me</a></li>
-                    <li><a href="#projectSection">My projects</a></li>
-                    <!-- <li><a href="#">What I can do</a></li> -->
-                    <li><a href="#contactMe">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- This is the dropdown menu for small devices -->
-        <nav class="nav-menu-small" >
-            <ul onclick="smallMenuClick()" class="navMenuItems" id="smallMenuItems">
-                <li><a href="#aboutMe">About me</a></li>
-                <li><a href="#projectSection">My projects</a></li>
-                <!-- <li><a href="#">What I can do</a></li> -->
-                <li><a href="#contactMe">Contact</a></li>
-            </ul>
+      <div>
+        <!-- Page header -->
+        <h2>Portfolio</h2>
+        <img
+          class="hamburger"
+          src="./assets/images/hamburger.png"
+          alt="Hamburger Icon"
+        />
+        <!-- menu for large devices -->
+        <nav class="navMenuLarge">
+          <ul class="navMenuItems">
+            <li><a href="#aboutMe">About me</a></li>
+            <li><a href="#projectSection">My projects</a></li>
+            <!-- <li><a href="#">What I can do</a></li> -->
+            <li><a href="#contactMe">Contact</a></li>
+          </ul>
         </nav>
+      </div>
+      <!-- This is the dropdown menu for small devices -->
+      <nav class="nav-menu-small">
+        <ul class="navMenuItems" id="smallMenuItems">
+          <li><a href="#aboutMe">About me</a></li>
+          <li><a href="#projectSection">My projects</a></li>
+          <!-- <li><a href="#">What I can do</a></li> -->
+          <li><a href="#contactMe">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
     <main>
-        <!-- About Me section using flexbox and responsive sizing -->
-        <Section class="aboutMe">
-            <aside>
-                <h3>Stuart Simmons</h3>
-                <h4>Professional web developer</h4>
-                <p>
-                    Coming from a background in mechanical engineering, factory automation and aviation I have developed the skills
-                     to present professional, user friendly functional web-sites. Gaining a myriad of experience in the industrial sector, my strengths lie with listening and working closely with
-                     clients to provide an easy web-space deployment.
-                </p>
-                <a href="#contactMe"><button>Contact Me</button></a>
+      <!-- About Me section using flexbox and responsive sizing -->
+      <section class="aboutMe">
+        <aside>
+          <h3>Stuart Simmons</h3>
+          <h4>Professional web developer</h4>
+          <p>
+            Coming from a background in mechanical engineering, factory
+            automation and aviation I have developed the skills to present
+            professional, user friendly functional web-sites. Gaining a myriad
+            of experience in the industrial sector, my strengths lie with
+            listening and working closely with clients to provide an easy
+            web-space deployment.
+          </p>
+          <a href="#contactMe"><button>Contact Me</button></a>
+        </aside>
 
-            </aside>
-            
-            <!-- Hero image -->
-            <div class="aboutMeDiv">
-                <img class="aboutMeImage" src="./assets/images/heroImage.jpg" alt="Image of Stuart Simmons">
-            </div>
-        </section>
+        <!-- Hero image -->
+        <div class="aboutMeDiv">
+          <img
+            class="aboutMeImage"
+            src="./assets/images/heroImage.jpg"
+            alt="Image of Stuart Simmons"
+          />
+        </div>
+      </section>
 
-        <!-- Project section -->
-        <section id="projectSection">
-            <h2>My Web Sites</h2>
-            
-            <div class="project">
-                <article class="projectBox first">
-                    <!-- Link image to website -->
-                    <a href="https://arcaviation.com.au">
-                        <img class="firstProjectImage" src="./assets/images/arcAviation-1024-768.jpg" alt="Cirrus aircraft flying">
-                    </a>
-                    <h4>ARC Aviation</h4>
-                    <p>Arc Aviation is an aviation training and sales company based at Moorabbin Airport, Melbourne  Australia.</p>
-                    <p>The website showcases their sales and flight training. The site includes specifications, photo galleries, news articles and contact information.</p>
-                </article>
-    
-                <article class="projectBox underConstruction">
-                    <a href="#">
-                        <img class="projectImage" src="./assets/images/christopherBurnsSydney.jpg" alt="Artistic image of glowing lights courtesy Christopher Burns ">
-                    </a>
-                    <h4>New project to come</h4>
-                    <p>Under Construction</p>
-                </article>
+      <!-- Project section -->
+      <section id="projectSection">
+        <h2>My Web Sites</h2>
 
-                <article class="projectBox underConstruction">
-                    <a href="#">
-                        <img class="projectImage" src="./assets/images/Wireframe-marco-nenzi-1024-768.jpg" alt="Image of sketched wireframe web-site courtesy of Marco Nenzi">
-                    </a>
-                    <h4>New project to come</h4>
-                    <p>Under Construction</p>
-                </article>
-            </div>      
-        </section>
+        <div class="project">
+          <article class="projectBox first">
+            <!-- Link image to website -->
+            <a
+              href="https://gitme-waffles.github.io/parody-pumper/"
+              target="_blank"
+            >
+              <img
+                class="firstProjectImage"
+                src="./assets/images/ParodyPumper-1024.png"
+                alt="Parody Pumper website"
+              />
+            </a>
+            <a
+              href="https://gitme-waffles.github.io/parody-pumper/"
+              target="_blank"
+            >
+              <h4>Parody Pumper</h4>
+            </a>
+            <ul>
+              <li>
+                ever wondered how your favourite song would sound with different
+                words
+              </li>
+              <li>Ever felt the words of a song just needed a little tweak?</li>
+              <li>Ever wanted to test someone's knowledge of a song</li>
+            </ul>
+            <p>
+              Change the lyrics of a song with rhymes, synonyms and antonyms.
+            </p>
+            <p>
+              This group project showcases the use of 3rd party API's, jQuery
+              along with various other programming skills
+            </p>
+          </article>
+
+          <article class="projectBox">
+            <a href="https://arcaviation.com.au" target="_blank">
+              <img
+                class="projectImage"
+                src="./assets/images/arcAviation-1024-768.jpg"
+                alt="Cirrus Aircraft Flying "
+              />
+            </a>
+            <h4>ARC Aviation</h4>
+            <p>
+              Arc Aviation is an aviation training and sales company based at
+              Moorabbin Airport, Melbourne Australia.
+            </p>
+            <p>
+              The website showcases their sales and flight training. The site
+              includes specifications, photo galleries, news articles and
+              contact information.
+            </p>
+            <p>This site has been built using Webflow</p>
+          </article>
+
+          <article class="projectBox underConstruction">
+            <a href="#">
+              <img
+                class="projectImage"
+                src="./assets/images/Wireframe-marco-nenzi-1024-768.jpg"
+                alt="Image of sketched wireframe web-site courtesy of Marco Nenzi"
+              />
+            </a>
+            <h4>New project to come</h4>
+            <p>Under Construction</p>
+          </article>
+        </div>
+      </section>
     </main>
-        <!-- Footer including contact details -->
-        <footer id="contactMe">
-            <h2>Contact information</h2>
+    <!-- Footer including contact details -->
+    <footer id="contactMe">
+      <h2>Contact information</h2>
 
-            <section class="myContactDetails">
-                <h5>Stuart Simmons</h5>
-                <a href="mailto:stuart@s********.***"><h6>E: stuart@simm****.***</h6></a>
-                <h6>M: 04** *** *55</h6>
-                <h6>Melbourne, Australia</h6>
-            </section>
+      <section class="myContactDetails">
+        <h5>Stuart Simmons</h5>
+        <a href="mailto:stuart@s********.***"
+          ><h6>E: stuart@simm****.***</h6></a
+        >
+        <h6>M: 04** *** *55</h6>
+        <h6>Melbourne, Australia</h6>
+      </section>
 
-            <section class="contactForm">
-                <form action="#">
-                    <label for="name">Your Name</label><br>
-                    <input type="text" name="name" id="name"size="30"><br>
-                    <label for="name">Your Email Address</label><br>
-                    <input type="text" name="name" id="name"size="30"><br>
-                    <label for="name">Your Phone Number</label><br>
-                    <input type="text" name="name" id="name"size="30"><br>
-                    <button>Contact Me</button>
-                </form>
-            </section>
-
-        </footer>
-
-
-    <script>
-        // script to open and close the mobile device menu
-        function myMenuClick() {
-            var e = document.getElementById("smallMenuItems");
-            if(e.style.display == 'flex')
-                e.style.display = 'none';
-            else
-                e.style.display = 'flex';
-        }
-        function smallMenuClick() {
-            document.getElementById("smallMenuItems").style.display = 'none';
-        }
-    </script>
-
-    </body>
+      <section class="contactForm">
+        <form action="#">
+          <label for="name">Your Name</label><br />
+          <input type="text" name="name" id="name" size="30" /><br />
+          <label for="name">Your Email Address</label><br />
+          <input type="text" name="name" id="name" size="30" /><br />
+          <label for="name">Your Phone Number</label><br />
+          <input type="text" name="name" id="name" size="30" /><br />
+          <button>Contact Me</button>
+        </form>
+      </section>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+      integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
