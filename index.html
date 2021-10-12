@@ -54,36 +54,114 @@
       </nav>
     </header>
 
-    <main>
+    <main class= "container">
       <!-- About Me section using flexbox and responsive sizing -->
-      <section class="aboutMe">
-        <aside>
-          <h3>Stuart Simmons</h3>
-          <h4>Professional web developer</h4>
-          <p>
-            Coming from a background in mechanical engineering, factory
-            automation and aviation I have developed the skills to present
-            professional, user friendly functional web-sites. Gaining a myriad
-            of experience in the industrial sector, my strengths lie with
-            listening and working closely with clients to provide an easy
-            web-space deployment.
-          </p>
+      <section class="cardBodyWide">
+        <aside class="cardText cardTextAbout">
+          <div>
+            <h3>Stuart Simmons</h3>
+            <h4>Professional web developer</h4>
+            <p>
+              Coming from a background in mechanical engineering, factory
+              automation and aviation I have developed the skills to present
+              professional, user friendly functional web-sites. Gaining a myriad
+              of experience in the industrial sector, my strengths lie with
+              listening and working closely with clients to provide an easy
+              web-space deployment.
+            </p>
+          </div>
           <a href="#contactMe"><button>Contact Me</button></a>
         </aside>
-
+        
         <!-- Hero image -->
-        <div class="aboutMeDiv">
+        <div class="cardImage">
           <img
-            class="aboutMeImage"
-            src="./assets/images/heroImage.jpg"
-            alt="Image of Stuart Simmons"
+          src="./assets/images/heroImage.jpg"
+          alt="Image of Stuart Simmons"
           />
         </div>
       </section>
 
       <!-- Project section -->
-      <section id="projectSection">
-        <h2>My Web Sites</h2>
+      <h2>My Web Sites</h2>
+
+      <!-- Parody Pumper -->
+      <section class="cardBodyWide">
+        <div class="cardText">
+          <a href="https://gitme-waffles.github.io/parody-pumper/" target="_blank">
+            <h4 class="text-center">Parody Pumper</h4>
+          </a>  
+          <ul>
+            <li>
+              ever wondered how your favourite song would sound with different
+              words
+            </li>
+            <li>Ever felt the words of a song just needed a little tweak?</li>
+            <li>Ever wanted to test someone's knowledge of a song</li>
+          </ul>
+          </br>
+          <p>
+            Change the lyrics of a song with rhymes, synonyms and antonyms.
+          </p>
+          <p>
+            This group project showcases the use of 3rd party API's, jQuery
+            along with various other programming skills including Github.
+          </p>
+      </div>
+        
+        <a class="cardImage" href="https://gitme-waffles.github.io/parody-pumper/" target="_blank">
+            <img src="./assets/images/ParodyPumper-1024.png" alt="Parody Pumper Screenshot">
+        </a>
+      </section>
+
+      <!-- Arc Aviation -->
+      <section class="cardBody">
+        <div class="cardText">
+          <a href="https://arcaviation.com.au" target="_blank">
+            <h4 class="text-center">ARC Aviation</h4>
+          </a>  
+          <p>
+            Arc Aviation is a flight training and sales company based at
+            Moorabbin Airport, Melbourne Australia.
+          </p>
+          <p>
+            The website showcases their sales and flight training. The site
+            includes specifications, photo galleries, news articles and
+            contact information.
+          </p>
+          <p>This site has been built using Webflow</p>
+      </div>
+        
+        <a class="cardImage" href="https://arcaviation.com.au" target="_blank">
+            <img src="./assets/images/arcAviation-1024-768.jpg" alt="ARC Aviation homepage, 2 Cirrus aircrfat in flight">
+        </a>
+      </section>
+
+      <!-- Weather Display -->
+      <section class="cardBody">
+        <div class="cardText">
+          <a href="https://arcaviation.com.au" target="_blank">
+            <h4 class="text-center">ARC Aviation</h4>
+          </a>  
+          <p>
+            Arc Aviation is a flight training and sales company based at
+            Moorabbin Airport, Melbourne Australia.
+          </p>
+          <p>
+            The website showcases their sales and flight training. The site
+            includes specifications, photo galleries, news articles and
+            contact information.
+          </p>
+          <p>This site has been built using Webflow</p>
+      </div>
+        
+        <a class="cardImage" href="https://arcaviation.com.au" target="_blank">
+            <img src="./assets/images/arcAviation-1024-768.jpg" alt="ARC Aviation homepage, 2 Cirrus aircrfat in flight">
+        </a>
+      </section>
+
+
+      <section class = "cardProjectWide" id="projectSection">
 
         <div class="project">
           <article class="projectBox first">
@@ -121,6 +199,7 @@
               along with various other programming skills including Github.
             </p>
           </article>
+
 
           <article class="projectBox">
             <a href="https://arcaviation.com.au" target="_blank">
