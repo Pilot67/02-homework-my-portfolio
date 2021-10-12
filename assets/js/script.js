@@ -1,6 +1,6 @@
 $hamburgerClk = $(".hamburger");
 $smallMenuClk = $("#smallMenuItems");
-smallMenuToggle = false;
+let smallMenuToggle = false;
 
 $hamburgerClk.click(() => {
   if ($smallMenuClk.hasClass("hide")) {

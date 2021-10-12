@@ -20,6 +20,8 @@ body {
   line-height: 1.5;
   color: var(--textBlack);
   background-color: var(--chalk);
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
 a {
@@ -96,6 +98,7 @@ footer section h6 {
   flex-wrap: wrap;
   max-width: 1180px;
   justify-content: center;
+  padding: 0 10px;
 }
 
 .hamburger {
@@ -110,7 +113,7 @@ footer section h6 {
 }
 
 .navMenuItems {
-  display: none;
+  display: block;
   flex-direction: column;
   background-color: var(--khaki);
 }
@@ -124,16 +127,7 @@ footer section h6 {
   color: var(--darkcharcoal);
   text-decoration: none;
   padding: 1rem 1rem;
-  line-height: 5rem;
-}
-
-/* aside styling */
-aside {
-  position: relative;
-  flex: 1 0 40%;
-  background-color: var(--khaki);
-  padding: 20px 20px 5px 20px;
-  order: 1;
+  line-height: 4rem;
 }
 
 /* button styling (whole web-site) */
@@ -155,6 +149,7 @@ button {
 .underConstruction p::after {
   content: " 👷";
 }
+
 /* Footer styling */
 footer {
   display: flex;
@@ -190,27 +185,24 @@ input {
   display: none;
 }
 
-.projectBox ul {
-  list-style-type: circle;
-  margin-left: 3rem;
-}
-
 .cardBodyWide {
   width: 100%;
-  padding: 5px;
   flex: 1 0 100%;
   display: flex;
   flex-direction: column-reverse;
-  background-color: cornflowerblue;
+  box-shadow: 0 0 2px 2px var(--darkcharcoal);
+  border-radius: 5px;
+  /* background-color: cornflowerblue; */
 }
 .cardBody {
   width: 100%;
-  padding: 5px;
   flex: 1 0 100%;
   display: flex;
   flex-direction: column-reverse;
-  min-height: 500px;
-  background-color: cornflowerblue;
+  box-shadow: 0 0 2px 2px var(--darkcharcoal);
+  border-radius: 5px;
+  margin: 15px 0px;
+  
 }
 
 .text-center {
@@ -219,23 +211,21 @@ input {
 
 .cardText {
   padding: 20px;
-  flex: 0 1 35%;
-  background-color: plum;
+  flex: 0 0 30%;
 }
 
 .cardTextAbout {
-    display: flex;
+  flex: 0 0 30%;  
+  display: flex;
   flex-direction:column;
   justify-content: space-between;
-
+  background-color:var(--khaki)
 }
 .cardImage {
-  padding: 20px;
-  flex: 0 1 65%;
-  background-color: salmon;
+  flex: 0 1 70%; 
 }
 .cardImage img {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 0% 50%;
@@ -272,12 +262,13 @@ input {
   .container {
     flex-direction: row;
     position: relative;
+
   }
   .cardBodyWide {
     flex-direction: row;
   }
   .cardBody {
-    flex: 0 0 50%;
+    flex: 1 0 45%;
   }
 
   .cardAboutMe {
@@ -293,24 +284,6 @@ input {
     transform: translate(-1px, -1px);
   }
 
-  /* project section styling */
-  .project {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .projectBox {
-    flex: 1 1 48%;
-  }
-  .first {
-    flex: 2 1 75%;
-  }
-  /* Set the width of the first photo to 70% and float right */
-  .firstProjectImage {
-    width: 70%;
-    float: right;
-    padding-left: 1rem;
-  }
-
   /* Change the footer from flex column to flex row */
   footer {
     flex-direction: row;
@@ -319,12 +292,8 @@ input {
 
 @media screen and (min-width: 992px) {
   /* Change the navigattion menu bar for PC screens */
-  body {
-    max-width: 1180px;
-    margin: 0 auto;
-  }
   .cardBody {
-    flex: 0 1 33%;
+    flex: 1 1 30%;
   }
   .pageTop {
       display: none;
