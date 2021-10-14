@@ -18,7 +18,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
@@ -27,7 +26,7 @@
     <header>
       <div>
         <!-- Page header -->
-        <h2>Portfolio</h2>
+        <h2>SimmonsOne</h2>
         <img
           class="hamburger"
           src="./assets/images/hamburger.png"
@@ -37,102 +36,157 @@
         <nav class="navMenuLarge">
           <ul class="navMenuItems">
             <li><a href="#aboutMe">About me</a></li>
-            <li><a href="#projectSection">My projects</a></li>
-            <!-- <li><a href="#">What I can do</a></li> -->
-            <li><a href="#contactMe">Contact</a></li>
+            <li><a href="#projectsHdg">My projects</a></li>
+            <li>
+              <button class = "menuButton">Contact</button>
+            </li>
           </ul>
         </nav>
       </div>
       <!-- This is the dropdown menu for small devices -->
       <nav class="nav-menu-small">
-        <ul class="navMenuItems" id="smallMenuItems">
+        <ul class="navMenuItems hide" id="smallMenuItems">
           <li><a href="#aboutMe">About me</a></li>
-          <li><a href="#projectSection">My projects</a></li>
+          <li><a href="#weatherDash">My projects</a></li>
           <!-- <li><a href="#">What I can do</a></li> -->
-          <li><a href="#contactMe">Contact</a></li>
+          <li><button class = "menuButton">Contact</button></li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <main class= "container">
       <!-- About Me section using flexbox and responsive sizing -->
-      <section class="aboutMe">
-        <aside>
-          <h3>Stuart Simmons</h3>
-          <h4>Professional web developer</h4>
-          <p>
-            Coming from a background in mechanical engineering, factory
-            automation and aviation I have developed the skills to present
-            professional, user friendly functional web-sites. Gaining a myriad
-            of experience in the industrial sector, my strengths lie with
-            listening and working closely with clients to provide an easy
-            web-space deployment.
-          </p>
-          <a href="#contactMe"><button>Contact Me</button></a>
+      <section class="cardBodyWide" id="stuarts">
+        <aside class="cardText cardTextAbout">
+          <div>
+            <h1 class="text-center">Portfolio</h1>
+            <h3 class="text-center">Stuart Simmons</h3><br>
+            <h3 class="text-center">Complete Website development</h3>
+            <p>
+              Coming from a background in mechanical engineering, factory
+              automation and aviation I have developed the skills to present
+              professional, user friendly functional web-sites.<br>
+              Gaining a myriad of experience in the industrial sector, my strengths lie with
+              creating easily accessable, functional applications whilst incorporating the latest
+              developments in full-stack programming.<br>
+              Listening and working closely with clients to provide an easy web-space deployment.
+            </p>
+          </div>
+          <!-- <a href="#contactMe"><button>Contact Me</button></a> -->
+          <a><button class="contactBtn">Lets Talk</button></a>
         </aside>
-
+        
         <!-- Hero image -->
-        <div class="aboutMeDiv">
+        <div class="cardImage">
           <img
-            class="aboutMeImage"
-            src="./assets/images/heroImage.jpg"
-            alt="Image of Stuart Simmons"
+          src="./assets/images/heroImage-1024.png"
+          alt="Image of Stuart Simmons"
           />
         </div>
       </section>
 
-      <!-- Project section -->
-      <section id="projectSection">
-        <h2>My Web Sites</h2>
+      <section class = "cardBodyWide">
+        <div class = "cardText">
+          <h2>Bio</h2>
+          <p>
+            links to professional pages can be found here:
+          </p>
+          <ul>
+            <li><a href="https://github.com/Pilot67" target="_blank">My Github Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/stuart-simmons-7a818325/" target="_blank">My LinkedIn Profile</a></li>
 
-        <div class="project">
-          <article class="projectBox first">
-            <!-- Link image to website -->
-            <a
-              href="https://gitme-waffles.github.io/parody-pumper/"
-              target="_blank"
-            >
-              <img
-                class="firstProjectImage"
-                src="./assets/images/ParodyPumper-1024.png"
-                alt="Parody Pumper website"
-              />
-            </a>
-            <a
-              href="https://gitme-waffles.github.io/parody-pumper/"
-              target="_blank"
-            >
-              <h4>Parody Pumper</h4>
-            </a>
+          </ul>
+          
+        </div>
+
+      </section>
+
+      <!-- Project section -->
+      <h2 id="projectsHdg">My Projects</h2>
+
+      <!-- Parody Pumper -->
+      <section class="cardBodyWide">
+        <div id="parodyPumper" class="cardText">
+          <div>
+
+            <a href="https://pilot67.github.io/parody-pumper/" target="_blank">
+              <h4 class="text-center">Parody Pumper</h4>
+            </a>  
             <ul>
               <li>
-                ever wondered how your favourite song would sound with different
+                Ever wondered how your favourite song would sound with different
                 words
               </li>
               <li>Ever felt the words of a song just needed a little tweak?</li>
               <li>Ever wanted to test someone's knowledge of a song</li>
             </ul>
-            </br>
-            <p>
-              Change the lyrics of a song with rhymes, synonyms and antonyms.
-            </p>
-            <p>
-              This group project showcases the use of 3rd party API's, jQuery
-              along with various other programming skills including Github.
-            </p>
-          </article>
+          </br>
+          <p>
+            Change the lyrics of a song with rhymes, synonyms and antonyms.
+          </p>
+          <p>
+            This group project showcases the use of 3rd party API's, jQuery
+            along with various other programming skills including Github.
+          </p>
+        </div>
+          <a href="https://github.com/Pilot67/parody-pumper" target="_blank">Click here for the Github Repository</a>
+      </div>
+        
+        <a class="cardImage" href="https://pilot67.github.io/parody-pumper/" target="_blank">
+            <img src="./assets/images/ParodyPumper-1024.png" alt="Parody Pumper Screenshot">
+        </a>
+      </section>
 
-          <article class="projectBox">
-            <a href="https://arcaviation.com.au" target="_blank">
-              <img
-                class="projectImage"
-                src="./assets/images/arcAviation-1024-768.jpg"
-                alt="Cirrus Aircraft Flying "
-              />
-            </a>
-            <h4>ARC Aviation</h4>
+      <!-- Weather Dashboard -->
+      <section class="cardBody">
+          <div id="WeatherDash" class="cardText">
+            <div>
+              <a href="https://pilot67.github.io/06-unique-weather-forecast/" target="_blank">
+                <h4 class="text-center">Weather Dashboard</h4>
+              </a>  
+              <p>
+                Utilising 'openweathermap' API this application allows the user to search worldwide cities and view the current weather and a 5 day forecast.
+              </p>
+              <p>The website showcases the use of API's, jQuery, jQueryUI</p>
+            </div>
+            <a href="https://github.com/Pilot67/06-unique-weather-forecast" target="_blank">Click here for the Github Repository</a>
+          </div>
+          <a class="cardImage" href="https://pilot67.github.io/06-unique-weather-forecast/" target="_blank">
+            <img src="./assets/images/WeatherDashboard.png" alt="Stuart's weather dashboard screenshot">
+          </a>
+      </section>
+
+      <!-- Work Day Scheduler-->
+      <section class="cardBody">
+        <div class="cardText">
+          <div>
+
+            <a href="https://pilot67.github.io/05-homework-work-day-scheduler/" target="_blank">
+              <h4 class="text-center">Workday Scheduler</h4>
+            </a>  
             <p>
-              Arc Aviation is an aviation training and sales company based at
+              A simple workday planner, this application can be easily expnded and customised to include a yearly planner with drag and drop events.
+            </p>
+            <p>Showcasing jQuery and jQueryUI along with moment.js librabry for time maipulation.</p>
+          </div>
+          <a href="https://github.com/Pilot67/05-homework-work-day-scheduler" target="_blank">Click here for the Github Repository</a>
+
+      </div>
+        
+        <a class="cardImage" href="https://pilot67.github.io/05-homework-work-day-scheduler/" target="_blank">
+            <img src="./assets/images/WorkDaySchedule.png" alt="Workday Scheduler">
+        </a>
+      </section>
+      <!-- Arc Aviation -->
+      <section class="cardBody">
+        <div class="cardText">
+          <div>
+
+            <a href="https://arcaviation.com.au" target="_blank">
+              <h4 class="text-center">ARC Aviation</h4>
+            </a>  
+            <p>
+              Arc Aviation is a flight training and sales company based at
               Moorabbin Airport, Melbourne Australia.
             </p>
             <p>
@@ -141,54 +195,62 @@
               contact information.
             </p>
             <p>This site has been built using Webflow</p>
-          </article>
-
-          <article class="projectBox underConstruction">
-            <a href="#">
-              <img
-                class="projectImage"
-                src="./assets/images/Wireframe-marco-nenzi-1024-768.jpg"
-                alt="Image of sketched wireframe web-site courtesy of Marco Nenzi"
-              />
-            </a>
-            <h4>New project to come</h4>
-            <p>Under Construction</p>
-          </article>
-        </div>
+          </div>
+      </div>
+        
+        <a class="cardImage" href="https://arcaviation.com.au" target="_blank">
+            <img src="./assets/images/arcAviation-1024-768.jpg" alt="ARC Aviation homepage, 2 Cirrus aircrfat in flight">
+        </a>
       </section>
+
+
+
     </main>
-    <!-- Footer including contact details -->
-    <footer id="contactMe">
-      <h2>Contact information</h2>
-
-      <section class="myContactDetails">
-        <h5>Stuart Simmons</h5>
-        <a href="mailto:stuart@s********.***"
-          ><h6>E: stuart@simm****.***</h6></a
-        >
-        <h6>M: 04** *** *55</h6>
-        <h6>Melbourne, Australia</h6>
-      </section>
-
-      <section class="contactForm">
-        <form action="#">
-          <label for="name">Your Name</label><br />
-          <input type="text" name="name" id="name" size="30" /><br />
-          <label for="name">Your Email Address</label><br />
-          <input type="text" name="name" id="name" size="30" /><br />
-          <label for="name">Your Phone Number</label><br />
-          <input type="text" name="name" id="name" size="30" /><br />
-          <button>Contact Me</button>
-        </form>
-      </section>
+    <!-- Footer -->
+    <footer>
+      <!-- <h2>Contact information</h2> -->
+      <button>Contact Me for Information</button>
+      <h4>Melbourne, Australia</h4>
     </footer>
+
+    <!-- modal layout -->
+    <div class = "hide modalContainer">
+        <!-- Modal card -->
+        <div class="modalCard">
+            <!-- Close Icon -->
+            <div id="modalClose">
+                &#9747
+            </div>
+            <!-- Title -->
+            <div class = "modalTitle">
+                <h2 class = "text-center">Simmons One</h2>
+                <h4 class = "text-center">Website Services</h4>
+
+            </div>
+            <!-- Contact Detail -->
+            <div class = "modalContact">
+                <a  href="mailto:developer@simmons1.net?subject=Enquiry%20from%20Website" >&#128233 developer@simmons1.net</a>
+                <a  href="tel:+61422779955" >&#128222 +61(0)422 779 955</a>
+            </div>
+            <h5 class="modalHeading text-center">Send me a message</h5>
+            <div class="modalFormEl">
+                <form Class="modalForm" action="https://formspree.io/f/mleavqda" method="post">
+                <!-- <form Class="modalForm" action=""> -->
+                    <label for="contactName">Your Name</label>
+                    <input id="contactName" class="modalFormInput" type="text" name="contactName" required>
+                    <label for="contactNumber">Phone Number</label>
+                    <input id="contactNumber"class="modalFormInput" type="tel" name="contactNumber">
+                    <label for="contactEmail">Email Address</label>
+                    <input id="contactEmail"class="modalFormInput" type="email" name="contactEmail">
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" class="modalFormInput" type="textarea" name="contactMessage" rows="3" placeholder="" maxlength="3000"></textarea>
+                    <button id="modalSubmit" type="submit" value="Submit">Submit</button>
+                </form>
+              </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
-      integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>

@@ -5,6 +5,7 @@
   --greenButton: #036d1a;
   --darkcharcoal: #33320b;
   --textBlack: #0c0c0c;
+  --modalcharcoal: #111109ce;
 }
 
 html {
@@ -20,6 +21,8 @@ body {
   line-height: 1.5;
   color: var(--textBlack);
   background-color: var(--chalk);
+  width: 100%;
+  margin: 0 auto;
 }
 
 a {
@@ -67,13 +70,21 @@ p {
 }
 
 header {
+  /* position: sticky; */
   width: 100%;
   top: 0px;
   color: var(--chalk);
   background-color: var(--darkcharcoal);
+  border-radius: none;
+  box-shadow: none;
+  padding: 2px 0;
+  opacity: .9;
+  z-index: 0;
 }
 
 header div {
+  max-width: 1080px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,12 +92,19 @@ header div {
 
 header div h2,
 footer h2,
-footer section h2,
-footer section h4,
-footer section h5,
-footer section h6 {
+footer h4 {
   color: var(--chalk);
-  padding: 1rem 1rem;
+  padding: 3rem 2rem;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1180px;
+  justify-content: center;
+  padding: 0 0px;
 }
 
 .hamburger {
@@ -101,7 +119,7 @@ footer section h6 {
 }
 
 .navMenuItems {
-  display: none;
+  display: block;
   flex-direction: column;
   background-color: var(--khaki);
 }
@@ -110,126 +128,209 @@ footer section h6 {
   box-shadow: 0 0 1px var(--darkcharcoal);
 }
 /* mobile menu items selection*/
-.navMenuItems a {
+.navMenuItems a,
+.navMenuItems button {
   display: block;
   color: var(--darkcharcoal);
   text-decoration: none;
   padding: 1rem 1rem;
-  line-height: 5rem;
-}
-
-/* aside styling */
-aside {
-  position: relative;
-  flex: 1 0 40%;
-  background-color: var(--khaki);
-  padding: 20px 20px 5px 20px;
-  order: 1;
-}
-
-aside h2,
-aside h3,
-aside h4 {
-  text-align: center;
-  margin-bottom: 2rem;
+  line-height: 4rem;
+  text-align: left;
+  margin: 0;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 /* button styling (whole web-site) */
 button {
   display: block;
   width: 85%;
-  margin: 2rem auto;
+  max-width: 400px;
+  margin: 0 auto;
   color: var(--chalk);
   background-color: var(--greenButton);
   border-radius: 2rem;
   border: none;
-  box-shadow: 0 0 0.3rem var(--darkcharcoal);
+  box-shadow: 0 0 10px 0 var(--darkcharcoal);
   padding: 0.75rem 1.5rem;
 }
 
-.aboutMe,
-.project {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.aboutMeDiv {
-  flex: 3 1 75%;
-}
-
-.aboutMeImage {
-  width: 100%;
-  margin-bottom: -0.75rem;
-}
-
-#projectSection {
-  margin: 3rem 0;
-}
-.projectBox {
-  display: block;
-  flex: 0 1 100%;
-  padding: 1rem;
-  border: 0.15rem var(--khaki) solid;
-  margin: 0.3rem 0.3rem;
-  box-shadow: 0 0 0.2rem var(--darkcharcoal);
-}
-.projectBox h2 {
-  color: var(--darkcharcoal);
-  text-align: center;
-}
-.projectImage,
-.firstProjectImage {
-  width: 100%;
-  float: right;
-}
-.underConstruction p::before {
-  content: "👷 ";
-}
-.underConstruction p::after {
-  content: " 👷";
-}
 /* Footer styling */
 footer {
   display: flex;
-  background-color: var(--darkcharcoal);
   flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  background-color: var(--darkcharcoal);
 }
 /* contact me heading*/
-#contactMe h2 {
+/* #contactMe h2 {
   flex: 2 1 100%;
   text-align: center;
 }
 .myContactDetails,
 .contactForm {
   display: block;
-  flex: 1 1 48%;
+  flex: 1 1 100%;
   padding: 1rem 2rem;
 }
 .myContactDetails {
   border-bottom: 1px solid var(--khaki);
+} */
+
+#projectsHdg {
+  margin: 3rem auto 1rem auto;
 }
-footer section label {
-  color: var(--chalk);
-}
+
 input {
   font-size: 1.75rem;
   margin-bottom: 1rem;
   width: 100%;
 }
 
+.cardBodyWide {
+  width: 100%;
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  box-shadow: 0 0 10px 0 var(--darkcharcoal);
+  border-radius: 2px;
+  margin: 15px 0;
+  /* background-color: cornflowerblue; */
+}
+.cardBody {
+  width: 100%;
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  box-shadow: 0 0 10px 0 var(--darkcharcoal);
+  border-radius: 2px;
+  margin: 15px 0px; 
+  padding: 10px;
+  align-self:stretch;
+  justify-content:flex-end;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.cardText {
+  padding: 20px;
+  flex: 1 0 30%;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+
+}
+.cardText ul {
+  list-style:disc;
+  margin-left: 20px;
+}
+
+.cardTextAbout {
+  flex: 0 0 30%;  
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  background-color:var(--khaki)
+}
+.cardImage {
+  width: 100%;
+}
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover ;
+  object-position: 15% 50%;
+}
+
+.modalContainer {
+  position:fixed;
+  z-index: 99;
+  top:0;
+  left:0;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color:var(--modalcharcoal);
+}
+
 .hide {
   display: none;
 }
 
-.projectBox ul {
-  list-style-type: circle;
-  margin-left: 3rem;
+aside p {
+  padding: 10px 0;
 }
+.modalCard {
+  padding: 10px 15px;
+  background-color:var(--khaki);
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 3px slategrey;
+  opacity: 1;
+}
+.text-center {
+  text-align: center;
+}
+
+.modalTitle {
+padding: 0 40px 20px 40px;
+}
+.modalContact {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px 20px 10px;
+  line-height: 2;
+}
+.modalContact a {
+  text-decoration: none;
+  color:var(--textBlack);
+}
+
+#modalClose{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color:white;
+  background-color:black;
+  padding: 0px 10px;
+  border-radius: 25px;
+  font-size: 2.5rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.modalForm {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalFormInput,
+input {
+  width: 100%;
+  border-radius: 10px;
+  padding: .5rem 1rem;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+.modalHeading {
+padding-top: 1rem;
+border-top: 1px solid var(--darkcharcoal);
+}
+
 @media screen and (min-width: 768px) {
   /* Change the navigattion menu bar for tablet screens */
+  header {
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 var(--darkcharcoal);
+    padding: 10px 0;
+  }
+  
   .hamburger,
   .nav-menu-small {
     display: none;
@@ -240,13 +341,15 @@ input {
     flex-direction: row;
     justify-content: flex-end;
     background-color: var(--darkcharcoal);
+    cursor: pointer;
   }
   .navMenuItems li {
     box-shadow: none;
   }
-  .navMenuItems a {
+  .navMenuItems a,
+  .navMenuItems button,
+  .menuButton {
     color: var(--chalk);
-
     text-decoration: none;
     padding: 1rem 1rem;
     line-height: 1.5rem;
@@ -255,53 +358,47 @@ input {
     color: var(--khaki);
     transform: translate(-2px, -2px);
   }
-  /* About me section syling*/
-  .aboutMe {
+
+  .cardTextAbout {
+    flex: 0 0 40%;  
+  }
+  
+  .cardBodyWide {
     flex-direction: row;
-    flex-wrap: nowrap;
-  }
-  aside {
-    order: 0;
-    max-width: 350px;
-  }
-  .aboutMeImage {
-    min-height: 100%;
-    object-fit: cover;
+    margin: 15px 10px;
+    align-items: stretch;
   }
 
+  .cardBody {
+    flex: 1 1 40%;
+    margin: 15px 10px;
+  }
+
+  .cardAboutMe {
+    flex-direction: row;
+  }
+
+  aside {
+    order: 0;
+  }
+
+  #projectsHdg {
+    margin-left: 0;
+    padding-left: 1rem;
+  }
+  
   button:hover {
     color: var(--khaki);
     transform: translate(-1px, -1px);
-  }
-
-  /* project section styling */
-  .project {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .projectBox {
-    flex: 1 1 48%;
-  }
-  .first {
-    flex: 2 1 75%;
-  }
-  /* Set the width of the first photo to 70% and float right */
-  .firstProjectImage {
-    width: 70%;
-    float: right;
-    padding-left: 1rem;
-  }
-
-  /* Change the footer from flex column to flex row */
-  footer {
-    flex-direction: row;
   }
 }
 
 @media screen and (min-width: 992px) {
   /* Change the navigattion menu bar for PC screens */
-  body {
-    max-width: 85%;
-    margin: 0 auto;
+  .cardBody {
+    flex: 1 1 25%;
+  }
+  .cardTextAbout {
+    flex: 0 0 30%;  
   }
 }
