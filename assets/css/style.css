@@ -6,7 +6,6 @@
   --darkcharcoal: #33320b;
   --textBlack: #0c0c0c;
   --modalcharcoal: #111109ce;
-
 }
 
 html {
@@ -93,12 +92,9 @@ header div {
 
 header div h2,
 footer h2,
-footer section h2,
-footer section h4,
-footer section h5,
-footer section h6 {
+footer h4 {
   color: var(--chalk);
-  padding: 1rem 2rem;
+  padding: 3rem 2rem;
 }
 
 .container {
@@ -162,14 +158,13 @@ button {
 /* Footer styling */
 footer {
   display: flex;
-  background-color: var(--darkcharcoal);
   flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  margin-bottom: 2rem;
+  align-items: center;
+  padding: 4rem 0;
+  background-color: var(--darkcharcoal);
 }
 /* contact me heading*/
-#contactMe h2 {
+/* #contactMe h2 {
   flex: 2 1 100%;
   text-align: center;
 }
@@ -181,7 +176,7 @@ footer {
 }
 .myContactDetails {
   border-bottom: 1px solid var(--khaki);
-}
+} */
 
 #projectsHdg {
   margin: 3rem auto 1rem auto;
@@ -223,6 +218,10 @@ input {
 .cardText {
   padding: 20px;
   flex: 1 0 30%;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+
 }
 .cardText ul {
   list-style:disc;
@@ -324,10 +323,6 @@ padding-top: 1rem;
 border-top: 1px solid var(--darkcharcoal);
 }
 
-textarea {
-  resize: none;
-}
-
 @media screen and (min-width: 768px) {
   /* Change the navigattion menu bar for tablet screens */
   header {
@@ -363,7 +358,7 @@ textarea {
     color: var(--khaki);
     transform: translate(-2px, -2px);
   }
-  /* About me section syling*/
+
   .cardTextAbout {
     flex: 0 0 40%;  
   }
@@ -373,6 +368,7 @@ textarea {
     margin: 15px 10px;
     align-items: stretch;
   }
+
   .cardBody {
     flex: 1 1 40%;
     margin: 15px 10px;
@@ -391,15 +387,9 @@ textarea {
     padding-left: 1rem;
   }
   
-
   button:hover {
     color: var(--khaki);
     transform: translate(-1px, -1px);
-  }
-
-  /* Change the footer from flex column to flex row */
-  footer {
-    flex-direction: row;
   }
 }
 
@@ -410,9 +400,5 @@ textarea {
   }
   .cardTextAbout {
     flex: 0 0 30%;  
-  }
-
-  .pageTop {
-      display: none;
   }
 }
