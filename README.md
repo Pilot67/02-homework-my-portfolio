@@ -1,5 +1,5 @@
 # My Portfolio
-Homework 02 - Building my own portfolio web page  
+### Updated web development portfolio  
   
 # About  
 This website showcases some of my most recent projects along with an insight to my professional career.  
