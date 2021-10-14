@@ -22,7 +22,7 @@ body {
   line-height: 1.5;
   color: var(--textBlack);
   background-color: var(--chalk);
-  max-width: 1180px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -71,14 +71,21 @@ p {
 }
 
 header {
-  width: calc(100%-50px);
+  /* position: sticky; */
+  width: 100%;
   top: 0px;
   color: var(--chalk);
   background-color: var(--darkcharcoal);
-  border-radius: 5px;
+  border-radius: none;
+  box-shadow: none;
+  padding: 2px 0;
+  opacity: .9;
+  z-index: 0;
 }
 
 header div {
+  max-width: 1080px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -136,8 +143,6 @@ footer section h6 {
   margin: 0;
   background-color: transparent;
   box-shadow: none;
-
-
 }
 
 /* button styling (whole web-site) */
@@ -152,15 +157,6 @@ button {
   border: none;
   box-shadow: 0 0 10px 0 var(--darkcharcoal);
   padding: 0.75rem 1.5rem;
-}
-
-
-
-.underConstruction p::before {
-  content: "👷 ";
-}
-.underConstruction p::after {
-  content: " 👷";
 }
 
 /* Footer styling */
@@ -186,15 +182,16 @@ footer {
 .myContactDetails {
   border-bottom: 1px solid var(--khaki);
 }
-footer section label {
-  color: var(--chalk);
+
+#projectsHdg {
+  margin: 3rem auto 1rem auto;
 }
+
 input {
   font-size: 1.75rem;
   margin-bottom: 1rem;
   width: 100%;
 }
-
 
 .cardBodyWide {
   width: 100%;
@@ -240,16 +237,13 @@ input {
   background-color:var(--khaki)
 }
 .cardImage {
-  /* flex: 1 1 40%;  */
   width: 100%;
-  /* height: 100%; */
 }
 .cardImage img {
   width: 100%;
-  /* min-width: 100%; */
   height: 100%;
   object-fit:cover ;
-  object-position: 0% 50%;
+  object-position: 15% 50%;
 }
 
 .modalContainer {
@@ -270,6 +264,9 @@ input {
   display: none;
 }
 
+aside p {
+  padding: 10px 0;
+}
 .modalCard {
   padding: 10px 15px;
   background-color:var(--khaki);
@@ -314,10 +311,13 @@ padding: 0 40px 20px 40px;
   flex-direction: column;
 }
 
-.modalFormInput {
+.modalFormInput,
+input {
   width: 100%;
   border-radius: 10px;
   padding: .5rem 1rem;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
 }
 .modalHeading {
 padding-top: 1rem;
@@ -330,6 +330,12 @@ textarea {
 
 @media screen and (min-width: 768px) {
   /* Change the navigattion menu bar for tablet screens */
+  header {
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 var(--darkcharcoal);
+    padding: 10px 0;
+  }
+  
   .hamburger,
   .nav-menu-small {
     display: none;
@@ -358,12 +364,18 @@ textarea {
     transform: translate(-2px, -2px);
   }
   /* About me section syling*/
-
+  .cardTextAbout {
+    flex: 0 0 40%;  
+  }
+  
   .cardBodyWide {
     flex-direction: row;
+    margin: 15px 10px;
+    align-items: stretch;
   }
   .cardBody {
     flex: 1 1 40%;
+    margin: 15px 10px;
   }
 
   .cardAboutMe {
@@ -373,6 +385,12 @@ textarea {
   aside {
     order: 0;
   }
+
+  #projectsHdg {
+    margin-left: 0;
+    padding-left: 1rem;
+  }
+  
 
   button:hover {
     color: var(--khaki);
@@ -389,8 +407,11 @@ textarea {
   /* Change the navigattion menu bar for PC screens */
   .cardBody {
     flex: 1 1 25%;
-    margin: 15px 15px;
   }
+  .cardTextAbout {
+    flex: 0 0 30%;  
+  }
+
   .pageTop {
       display: none;
   }
