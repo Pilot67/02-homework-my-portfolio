@@ -1,13 +1,26 @@
-# 02-homework-my-portfolio
-Homework 02 - Building my own portfolio web page
-```
-https://github.com/Pilot67/02-homework-my-portfolio
-```
-```
-https://pilot67.github.io/02-homework-my-portfolio/
-```
-This is my Professional portfolio web-site. The menu links at the top of the page will scroll the page to the sections - 'About Me' , 'My Projects' , 'Contact Information'.
-The website is responsive and the menu will change to a 'Hamburger' style on mobile devices.
-Please explore and leave me any commnets on improvements.
+# My Portfolio
+Homework 02 - Building my own portfolio web page  
+  
+# About  
+This website showcases some of my most recent projects along with an insight to my professional career.  
+![portfolio-main-640](https://user-images.githubusercontent.com/86697483/137245947-f547aa8c-adc1-40d8-8483-d6e91f73c947.png)  
+  
 
-![Stuarts Portfolio Web-site](https://user-images.githubusercontent.com/86697483/131589316-bbde69b2-e604-4af0-a026-8eccc09e30aa.png)
+# Usage  
+scroll throgh and browse some of my unique achievemnets. Clicking on any of the images or titles will take you to the deployed website  
+The site is responsive and mobile friendly  
+![portfolio-mobile-640](https://user-images.githubusercontent.com/86697483/137246343-7c967f5c-2a2d-4e63-b84d-c1113becf32c.png)  
+  
+![portfolio-contact-640](https://user-images.githubusercontent.com/86697483/137246377-52361697-d6e7-4448-856c-28ed6051f432.png)  
+  
+## Change log  
+* Updated and added new projects.  
+* Updated the contact page - now a modal page  
+* updated contact information  
+* Refined the flexbox integration and css  
+* Added jQuery  
+* Renamed the project
+  
+# Links
+Project Link: https://github.com/Pilot67/portfolio-professional-web-developer  
+Published Link: https://pilot67.github.io/portfolio-professional-web-developer/  
