@@ -13,17 +13,14 @@ $smallMenuClk.click(() => $smallMenuClk.addClass("hide"));
 $modalCard.on("click", (event) => {
     event.stopPropagation();
     console.log(event.target)
-    if (event.target.id === $modalClose[0].id){
-      $(".modalForm")[0].reset();
-      $modalContainer.toggleClass("hide");
-    }
+    if (event.target.id === $modalClose[0].id){$modalContainer.toggleClass("hide")};
 })
 
 $modalContainer.click((event) => $modalContainer.toggleClass("hide"));
 
 $contactBtn.click((event) => {
-  $modalContainer.toggleClass("hide")
   $(".modalForm")[0].reset();
+  $modalContainer.toggleClass("hide")
 });
 
 $(".modalForm").submit((event) => $modalContainer.toggleClass("hide"));
