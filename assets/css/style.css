@@ -181,7 +181,6 @@ input {
   box-shadow: 0 0 10px 0 var(--darkcharcoal);
   border-radius: 2px;
   margin: 15px 0;
-  /* background-color: cornflowerblue; */
 }
 .cardBody {
   width: 100%;
@@ -231,6 +230,9 @@ input {
   height: 100%;
   object-fit:cover ;
   object-position: 15% 50%;
+}
+#pilot-log {
+  object-position: center center;
 }
 
 .modalContainer {
@@ -352,7 +354,7 @@ border-top: 1px solid var(--darkcharcoal);
   }
   
   .cardBodyWide {
-    flex-direction: row;
+    /* flex-direction: row; */
     margin: 15px 10px;
     align-items: stretch;
   }
